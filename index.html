@@ -21,39 +21,53 @@
     /* base styles */
     *{box-sizing:border-box;}
     html{scroll-behavior:smooth;}
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:linear-gradient(135deg,#121212,#181818);color:#f2f2f2;line-height:1.6;}
-    a{color:#9adbe8;}
+    :root{
+      --bg:#0f172a;
+      --bg-section:#1e293b;
+      --border:#334155;
+      --text:#e2e8f0;
+      --accent-start:#a855f7;
+      --accent-end:#3b82f6;
+    }
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+    a{color:var(--accent-end);}
     a:hover{text-decoration:underline;}
-    :focus-visible{outline:2px solid #9adbe8;outline-offset:2px;}
-    header{background:linear-gradient(90deg,#1a1a1a,#222);position:sticky;top:0;z-index:10;}
-    .nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:.5rem 1rem;}
+    :focus-visible{outline:2px solid var(--accent-end);outline-offset:2px;}
+    header{background:rgba(15,23,42,.8);backdrop-filter:blur(6px);position:sticky;top:0;z-index:10;border-bottom:1px solid var(--border);}
+    .nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:.75rem 1rem;}
     .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;}
-    .nav a{color:#f2f2f2;}
-    .lang-toggle{background:none;border:1px solid #f2f2f2;color:#f2f2f2;padding:.25rem .5rem;border-radius:4px;}
+    .nav a{color:var(--text);text-decoration:none;}
+    .logo a{background:linear-gradient(90deg,var(--accent-start),var(--accent-end));-webkit-background-clip:text;color:transparent;font-weight:600;font-size:1.1rem;}
+    .lang-toggle{background:none;border:1px solid var(--border);color:var(--text);padding:.25rem .5rem;border-radius:4px;}
     main{max-width:1100px;margin:auto;padding:1rem;}
-    section{padding:3rem 1rem;margin:2rem 0;border:1px solid #333;border-radius:12px;background:linear-gradient(135deg,#1e1e1e,#2a2a2a);}
-    .hero{text-align:center;padding-top:4rem;}
-    .hero small{display:block;margin-top:1rem;font-size:.8rem;color:#bbb;}
-    .btn{display:inline-block;padding:.75rem 1.25rem;border-radius:30px;border:none;cursor:pointer;text-align:center;}
-    .btn-primary{background:linear-gradient(45deg,#7d3cff,#00c9a7);color:#fff;}
-    .btn-secondary{background:#333;color:#fff;}
-    .btn-link{color:#9adbe8;display:inline-block;margin-top:.5rem;}
-    .cards{display:grid;gap:2rem;}
-    @media(min-width:600px){.cards{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}}
-    .card{background:linear-gradient(135deg,#2a2a2a,#1e1e1e);padding:1.5rem;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.3);border:1px solid #333;}
+    section{padding:4rem 1.5rem;margin:4rem 0;border:1px solid var(--border);border-radius:12px;background:var(--bg-section);}
+    .gradient-text{background:linear-gradient(90deg,var(--accent-start),var(--accent-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    .hero{text-align:center;padding-top:6rem;}
+    .hero p{max-width:700px;margin:1rem auto 2rem;color:#94a3b8;}
+    .hero small{display:block;margin-top:2rem;font-size:.8rem;color:#94a3b8;}
+    .cta{display:flex;gap:1rem;justify-content:center;margin-top:2rem;}
+    .btn{display:inline-block;padding:1rem 2rem;border-radius:999px;border:none;cursor:pointer;text-align:center;font-size:1rem;}
+    .btn-primary{background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;}
+    .btn-secondary{background:none;color:var(--text);border:1px solid var(--border);}
+    .btn-secondary:hover{background:rgba(255,255,255,.05);}
+    .btn-link{color:var(--accent-end);display:inline-block;margin-top:.5rem;}
+    .cards{display:grid;gap:1.5rem;margin-top:3rem;}
+    @media(min-width:640px){.cards{grid-template-columns:repeat(3,1fr);}}
+    .card{background:var(--bg);padding:2rem;border-radius:1rem;border:1px solid var(--border);text-align:left;display:flex;flex-direction:column;gap:1rem;}
+    .card .icon{font-size:2rem;}
     img{max-width:100%;height:auto;border-radius:6px;}
     #menu .filters{margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.5rem;}
-    #menu .filters button{background:#333;color:#fff;border:none;padding:.5rem 1rem;border-radius:20px;cursor:pointer;}
-    #menu .filters button.active{background:#7d3cff;}
+    #menu .filters button{background:var(--bg);color:var(--text);border:1px solid var(--border);padding:.5rem 1rem;border-radius:20px;cursor:pointer;}
+    #menu .filters button.active{background:var(--accent-start);}
     #menu .card{transition:opacity .3s ease;}
     #calc-form label{display:block;margin-bottom:1rem;}
     input,button{font-family:inherit;}
-    input[type=number],input[type=email]{width:100%;padding:.5rem;border-radius:4px;border:1px solid #444;background:#222;color:#fff;}
+    input[type=number],input[type=email]{width:100%;padding:.5rem;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:#fff;}
     #calc-result,#newsletter-msg{margin-top:1rem;min-height:2rem;}
     .faq-item{margin-bottom:1rem;}
-    .faq-question{width:100%;text-align:left;background:#333;color:#fff;border:none;padding:1rem;border-radius:6px;cursor:pointer;}
+    .faq-question{width:100%;text-align:left;background:var(--bg);color:var(--text);border:1px solid var(--border);padding:1rem;border-radius:6px;cursor:pointer;}
     .faq-answer{overflow:hidden;max-height:0;transition:max-height .3s ease;padding:0 1rem;}
-    footer{background:linear-gradient(90deg,#1a1a1a,#222);padding:2rem 1rem;text-align:center;border-top:1px solid #333;}
+    footer{background:rgba(15,23,42,.8);padding:2rem 1rem;text-align:center;border-top:1px solid var(--border);}
   </style>
   <!-- // JSON-LD -->
   <script type="application/ld+json">
@@ -108,43 +122,43 @@
 </header>
 <main>
   <section id="hero" class="hero">
-    <h1 data-lang="ru">Кальянная диета — метафора баланса вкуса</h1>
-    <h1 data-lang="en" hidden>Hookah Diet — a metaphor of flavour balance</h1>
-    <p data-lang="ru">Кальянная диета — это не про калории. Это про ритуалы, чай и спокойный ритм. Меньше суеты — больше вкуса.</p>
-    <p data-lang="en" hidden>The hookah diet is not about calories. It's about tea rituals and a calm rhythm. Less rush — more taste.</p>
+    <h1 class="gradient-text" data-lang="ru">Кальянная диета — метафора баланса вкуса</h1>
+    <h1 class="gradient-text" data-lang="en" hidden>Hookah Diet — a metaphor of flavour balance</h1>
+    <p data-lang="ru">Кальянная диета — это не про калории. Это про ритуалы, чай и спокойный ритм жизни. Меньше суеты — больше вкуса. Откройте для себя лайфстайл, где каждый глоток чая становится моментом присутствия и расслабления.</p>
+    <p data-lang="en" hidden>The hookah diet is not about calories. It's about tea rituals and a calm pace. Less hustle — more flavour. Discover a lifestyle where every sip of tea becomes a moment of presence and relaxation.</p>
     <div class="cta">
-      <a data-lang="ru" href="#calc" class="btn btn-primary">Калькулятор</a>
-      <a data-lang="en" href="#calc" class="btn btn-primary" hidden>Calculator</a>
-      <a data-lang="ru" href="#blog" class="btn btn-secondary">Блог</a>
-      <a data-lang="en" href="#blog" class="btn btn-secondary" hidden>Blog</a>
+      <a data-lang="ru" href="#calc" class="btn btn-primary">Калькулятор ритуалов</a>
+      <a data-lang="en" href="#calc" class="btn btn-primary" hidden>Rituals calculator</a>
+      <a data-lang="ru" href="#blog" class="btn btn-secondary">Читать блог</a>
+      <a data-lang="en" href="#blog" class="btn btn-secondary" hidden>Read blog</a>
     </div>
-    <small data-lang="ru">Это метафора, не медицинская диета.</small>
-    <small data-lang="en" hidden>This is a metaphor, not medical advice.</small>
+    <small data-lang="ru">Эта методика образа жизни, не медицинская диета.</small>
+    <small data-lang="en" hidden>This lifestyle is a metaphor, not medical advice.</small>
   </section>
 
   <section id="benefits">
-    <h2>Преимущества</h2>
+    <h2 class="gradient-text">Преимущества кальянной диеты</h2>
     <div class="cards">
       <div class="card">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Чай и мягкий свет" loading="lazy">
+        <div class="icon">💭</div>
+        <h3 data-lang="ru">Ритуал вместо хаоса</h3>
+        <h3 data-lang="en" hidden>Ritual over chaos</h3>
+        <p data-lang="ru">Замедлите спонтанные перекусы на осознанные чайные ритуалы. Каждая перемена становится паузой для размышлений и расслабления.</p>
+        <p data-lang="en" hidden>Swap sudden snacks for mindful tea rituals. Each change becomes a pause for thought and ease.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🌿</div>
         <h3 data-lang="ru">Атмосферный отдых</h3>
-        <h3 data-lang="en" hidden>Atmospheric break</h3>
-        <p data-lang="ru">Мы создаём атмосферный отдых: мягкий свет, неспешные беседы и чайные ритуалы, где расслабление приходит естественно.</p>
-        <p data-lang="en" hidden>Soft light and slow talks set the mood. Tea rituals guide you to natural relaxation.</p>
+        <h3 data-lang="en" hidden>Atmospheric rest</h3>
+        <p data-lang="ru">Создайте уютную атмосферу с цветом, ароматами и медленной музыкой. Превратите обычный вечер в особенный момент.</p>
+        <p data-lang="en" hidden>Create a cosy vibe with colour, scents and slow music. Turn an ordinary evening into a special moment.</p>
       </div>
       <div class="card">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Лёгкие снеки" loading="lazy">
-        <h3 data-lang="ru">Баланс без лишних калорий</h3>
-        <h3 data-lang="en" hidden>Balance without extra calories</h3>
-        <p data-lang="ru">Лёгкие закуски и чай держат вкус в центре внимания. Кальянная диета напоминает: удовольствие не требует излишков.</p>
-        <p data-lang="en" hidden>Light snacks and tea keep flavour in focus. Pleasure doesn't need excess.</p>
-      </div>
-      <div class="card">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Чайный ритуал" loading="lazy">
-        <h3 data-lang="ru">Лайфстайл в ритме вкуса</h3>
-        <h3 data-lang="en" hidden>Lifestyle in a flavour rhythm</h3>
-        <p data-lang="ru">Чайные ритуалы и спокойный лайфстайл помогают замедлиться, вдохнуть и почувствовать баланс вкуса.</p>
-        <p data-lang="en" hidden>Tea rituals and a calm lifestyle help you slow down, breathe and feel balanced flavour.</p>
+        <div class="icon">⚖️</div>
+        <h3 data-lang="ru">Баланс без стресса</h3>
+        <h3 data-lang="en" hidden>Balance without stress</h3>
+        <p data-lang="ru">Никаких строгих ограничений — только осознанность. Научитесь слушать своё тело и находить гармонию в простых удовольствиях.</p>
+        <p data-lang="en" hidden>No strict rules — just awareness. Learn to listen to your body and find harmony in simple pleasures.</p>
       </div>
     </div>
   </section>
