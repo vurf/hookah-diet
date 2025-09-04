@@ -1,11 +1,369 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <!-- // SEO -->
   <meta charset="UTF-8">
-  <title>Кальянная диета</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кальянная диета — расслабляющий лайфстайл, чайные ритуалы и баланс вкуса</title>
+  <meta name="description" content="«Кальянная диета» — метафора образа жизни: меньше суеты, больше вкуса. Чайные ритуалы, лёгкие снеки, атмосфера релакса и блог. Это не медицинская диета.">
+  <link rel="canonical" href="/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Кальянная диета — расслабляющий лайфстайл, чайные ритуалы и баланс вкуса">
+  <meta property="og:description" content="«Кальянная диета» — метафора образа жизни: меньше суеты, больше вкуса. Чайные ритуалы, лёгкие снеки, атмосфера релакса и блог. Это не медицинская диета.">
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E"><!-- TODO: real image -->
+  <meta property="og:url" content="https://example.com"><!-- TODO: real url -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Кальянная диета — расслабляющий лайфстайл, чайные ритуалы и баланс вкуса">
+  <meta name="twitter:description" content="«Кальянная диета» — метафора образа жизни: меньше суеты, больше вкуса. Чайные ритуалы, лёгкие снеки, атмосфера релакса и блог. Это не медицинская диета.">
+  <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E">
+  <!-- TODO: add favicon -->
+  <style>
+    /* base styles */
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#121212;color:#f2f2f2;line-height:1.6;}
+    a{color:#9adbe8;}
+    a:hover{text-decoration:underline;}
+    :focus-visible{outline:2px solid #9adbe8;outline-offset:2px;}
+    header{background:#1a1a1a;position:sticky;top:0;z-index:10;}
+    .nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:.5rem 1rem;}
+    .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;}
+    .nav a{color:#f2f2f2;}
+    .lang-toggle{background:none;border:1px solid #f2f2f2;color:#f2f2f2;padding:.25rem .5rem;border-radius:4px;}
+    main{max-width:1100px;margin:auto;padding:1rem;}
+    section{padding:3rem 0;}
+    .hero{text-align:center;padding-top:4rem;}
+    .hero small{display:block;margin-top:1rem;font-size:.8rem;color:#bbb;}
+    .btn{display:inline-block;padding:.75rem 1.25rem;border-radius:30px;border:none;cursor:pointer;text-align:center;}
+    .btn-primary{background:linear-gradient(45deg,#7d3cff,#00c9a7);color:#fff;}
+    .btn-secondary{background:#333;color:#fff;}
+    .btn-link{color:#9adbe8;display:inline-block;margin-top:.5rem;}
+    .cards{display:grid;gap:1.5rem;}
+    @media(min-width:600px){.cards{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}}
+    .card{background:#1e1e1e;padding:1rem;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.3);}
+    img{max-width:100%;height:auto;border-radius:6px;}
+    #menu .filters{margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.5rem;}
+    #menu .filters button{background:#333;color:#fff;border:none;padding:.5rem 1rem;border-radius:20px;cursor:pointer;}
+    #menu .filters button.active{background:#7d3cff;}
+    #menu .card{transition:opacity .3s ease;}
+    #calc-form label{display:block;margin-bottom:1rem;}
+    input,button{font-family:inherit;}
+    input[type=number],input[type=email]{width:100%;padding:.5rem;border-radius:4px;border:1px solid #444;background:#222;color:#fff;}
+    #calc-result,#newsletter-msg{margin-top:1rem;min-height:2rem;}
+    .faq-item{margin-bottom:1rem;}
+    .faq-question{width:100%;text-align:left;background:#333;color:#fff;border:none;padding:1rem;border-radius:6px;cursor:pointer;}
+    .faq-answer{overflow:hidden;max-height:0;transition:max-height .3s ease;padding:0 1rem;}
+    footer{background:#1a1a1a;padding:2rem 1rem;text-align:center;}
+  </style>
+  <!-- // JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "name":"Кальянная диета",
+        "url":"https://example.com",
+        "potentialAction":{
+          "@type":"SearchAction",
+          "target":"https://example.com/?s={search_term_string}",
+          "query-input":"required name=search_term_string"
+        }
+      },
+      {
+        "@type":"Organization",
+        "name":"Кальянная диета",
+        "url":"https://example.com",
+        "sameAs":["https://vk.com/placeholder","https://t.me/placeholder"]
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Это не настоящая диета?","acceptedAnswer":{"@type":"Answer","text":"Да, это образ жизни и метафора расслабления, а не медицинская диета."}},
+          {"@type":"Question","name":"Есть ли медицинские рекомендации?","acceptedAnswer":{"@type":"Answer","text":"Нет. Проект не даёт медицинских рекомендаций."}},
+          {"@type":"Question","name":"Можно ли совмещать с другими привычками?","acceptedAnswer":{"@type":"Answer","text":"Конечно, кальянная диета легко вписывается в ваш режим как напоминание о паузах и вкусе."}},
+          {"@type":"Question","name":"Сколько времени занимает чайный ритуал?","acceptedAnswer":{"@type":"Answer","text":"Всего несколько минут, но эффект расслабления длится дольше."}},
+          {"@type":"Question","name":"Что если я предпочитаю кофе?","acceptedAnswer":{"@type":"Answer","text":"Вы можете адаптировать ритуал под себя, оставаясь в темпе спокойного лайфстайла."}}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <h1>Добро пожаловать в кальянную диету!</h1>
-  <p>Здесь будет твой контент 🚀</p>
+<header>
+  <nav class="nav">
+    <div class="logo"><a href="#hero">Кальянная диета</a></div>
+    <ul>
+      <li><a href="#benefits">Преимущества</a></li>
+      <li><a href="#program">Программа</a></li>
+      <li><a href="#calc">Калькулятор</a></li>
+      <li><a href="#menu">Меню</a></li>
+      <li><a href="#blog">Блог</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#newsletter">Подписка</a></li>
+    </ul>
+    <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">EN</button>
+  </nav>
+</header>
+<main>
+  <section id="hero" class="hero">
+    <h1 data-lang="ru">Кальянная диета — метафора баланса вкуса</h1>
+    <h1 data-lang="en" hidden>Hookah Diet — a metaphor of flavour balance</h1>
+    <p data-lang="ru">Кальянная диета — это не про калории. Это про ритуалы, чай и спокойный ритм. Меньше суеты — больше вкуса.</p>
+    <p data-lang="en" hidden>The hookah diet is not about calories. It's about tea rituals and a calm rhythm. Less rush — more taste.</p>
+    <div class="cta">
+      <a data-lang="ru" href="#calc" class="btn btn-primary">Калькулятор</a>
+      <a data-lang="en" href="#calc" class="btn btn-primary" hidden>Calculator</a>
+      <a data-lang="ru" href="#blog" class="btn btn-secondary">Блог</a>
+      <a data-lang="en" href="#blog" class="btn btn-secondary" hidden>Blog</a>
+    </div>
+    <small data-lang="ru">Это метафора, не медицинская диета.</small>
+    <small data-lang="en" hidden>This is a metaphor, not medical advice.</small>
+  </section>
+
+  <section id="benefits">
+    <h2>Преимущества</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Чай и мягкий свет" loading="lazy">
+        <h3 data-lang="ru">Атмосферный отдых</h3>
+        <h3 data-lang="en" hidden>Atmospheric break</h3>
+        <p data-lang="ru">Мы создаём атмосферный отдых: мягкий свет, неспешные беседы и чайные ритуалы, где расслабление приходит естественно.</p>
+        <p data-lang="en" hidden>Soft light and slow talks set the mood. Tea rituals guide you to natural relaxation.</p>
+      </div>
+      <div class="card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Лёгкие снеки" loading="lazy">
+        <h3 data-lang="ru">Баланс без лишних калорий</h3>
+        <h3 data-lang="en" hidden>Balance without extra calories</h3>
+        <p data-lang="ru">Лёгкие закуски и чай держат вкус в центре внимания. Кальянная диета напоминает: удовольствие не требует излишков.</p>
+        <p data-lang="en" hidden>Light snacks and tea keep flavour in focus. Pleasure doesn't need excess.</p>
+      </div>
+      <div class="card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Чайный ритуал" loading="lazy">
+        <h3 data-lang="ru">Лайфстайл в ритме вкуса</h3>
+        <h3 data-lang="en" hidden>Lifestyle in a flavour rhythm</h3>
+        <p data-lang="ru">Чайные ритуалы и спокойный лайфстайл помогают замедлиться, вдохнуть и почувствовать баланс вкуса.</p>
+        <p data-lang="en" hidden>Tea rituals and a calm lifestyle help you slow down, breathe and feel balanced flavour.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="program">
+    <h2>Программа</h2>
+    <p>Программа «Кальянная диета» — набор привычек, которые переводят внимание на вкус, дыхание и паузы.</p>
+    <ul>
+      <li>Ритуал вместо хаоса — возьми чашку чая и устрой паузу.</li>
+      <li>Вкус вместо перекуса — оцени чай или лёгкий снек, а не спешный фастфуд.</li>
+      <li>Дыхание и пауза — несколько глубоких вдохов перед следующим делом.</li>
+      <li>Чай как момент присутствия — остановись и почувствуй аромат.</li>
+    </ul>
+  </section>
+
+  <section id="calc">
+    <h2>Калькулятор перекусов</h2>
+    <p>Посмотри, сколько калорий экономит кальянная диета, когда ты заменяешь перекусы чайными ритуалами.</p>
+    <form id="calc-form">
+      <label>Сколько перекусов в день
+        <input id="snacks" type="number" min="0" required>
+      </label>
+      <label>Средняя калорийность перекуса
+        <input id="calories" type="number" min="0" required>
+      </label>
+      <label>Сколько дней
+        <input id="days" type="number" min="1" required>
+      </label>
+      <button class="btn btn-primary" type="submit">Посчитать</button>
+      <button class="btn btn-secondary" type="button" id="reset">Сброс</button>
+    </form>
+    <p id="calc-result" role="status" aria-live="polite"></p>
+  </section>
+
+  <section id="menu">
+    <h2>Меню чаёв и снэков</h2>
+    <div class="filters">
+      <button class="active" data-filter="all">Все</button>
+      <button data-filter="berry">Ягоды</button>
+      <button data-filter="citrus">Цитрус</button>
+      <button data-filter="herbal">Травы</button>
+      <button data-filter="nutty">Орехи</button>
+      <button data-filter="sweet">Сладкое</button>
+    </div>
+    <div class="cards">
+      <div class="card" data-tags="herbal">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Жасминовый чай" loading="lazy">
+        <h3>Лёгкий жасмин</h3>
+        <p>Зелёный чай с жасмином освежает ум и помогает настроиться на расслабление.</p>
+      </div>
+      <div class="card" data-tags="berry,sweet">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Ягодный чай" loading="lazy">
+        <h3>Ягодный холодок</h3>
+        <p>Яркая смесь сушёных ягод и тонкого сахара — лёгкий десерт без лишних калорий.</p>
+      </div>
+      <div class="card" data-tags="citrus">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Чай с лимоном" loading="lazy">
+        <h3>Цитрусовый заряд</h3>
+        <p>Цитрус и мята бодрят утром, сохраняя баланс вкуса.</p>
+      </div>
+      <div class="card" data-tags="nutty">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Орехи" loading="lazy">
+        <h3>Ореховый снек</h3>
+        <p>Горсть орехов поддерживает энергию и даёт ощущение сытости.</p>
+      </div>
+      <div class="card" data-tags="sweet">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Медовая курага" loading="lazy">
+        <h3>Медовая курага</h3>
+        <p>Сушёная курага с лёгким оттенком мёда — природная сладость для кальянной диеты.</p>
+      </div>
+      <div class="card" data-tags="herbal">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23333'/%3E%3C/svg%3E" alt="Травяной сбор" loading="lazy">
+        <h3>Травяной баланс</h3>
+        <p>Сбор трав для вечернего расслабления и мягкого сна.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Блог о вкусе</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Чайный ритуал против стресса</h3>
+        <time datetime="2024-06-01">1 июня 2024</time>
+        <p>Короткий чайный ритуал снимает напряжение и подсказывает, как кальянная диета вписывается в городской лайфстайл.</p>
+        <a class="btn-link" href="#post1">Читать</a>
+      </article>
+      <article class="card">
+        <h3>Кальянная диета как городской лайфстайл</h3>
+        <time datetime="2024-05-20">20 мая 2024</time>
+        <p>Мысль о балансе без лишних калорий помогает найти атмосферный отдых даже в длинный рабочий день.</p>
+        <a class="btn-link" href="#post2">Читать</a>
+      </article>
+      <article class="card">
+        <h3>Лёгкие закуски и баланс вкуса</h3>
+        <time datetime="2024-05-05">5 мая 2024</time>
+        <p>Чайные ритуалы дополняют лёгкие снеки, раскрывая блог о вкусе и собственный ритм расслабления.</p>
+        <a class="btn-link" href="#post3">Читать</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="newsletter">
+    <h2>Подписка</h2>
+    <p>Получай новости блога и новые идеи для чайных ритуалов.</p>
+    <form id="newsletter-form">
+      <label>Email
+        <input id="email" type="email" required placeholder="you@example.com">
+      </label>
+      <label>
+        <input type="checkbox" id="agree" required> Согласен с условиями обработки данных
+      </label>
+      <button class="btn btn-primary" type="submit">Подписаться</button>
+    </form>
+    <p id="newsletter-msg" role="status" aria-live="polite"></p>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+        <span data-lang="ru">Это не настоящая диета?</span>
+        <span data-lang="en" hidden>Is this a real diet?</span>
+      </button>
+      <div id="faq1" class="faq-answer" hidden>
+        <p data-lang="ru">Верно, кальянная диета — метафора расслабления и вкуса, а не медицинский план.</p>
+        <p data-lang="en" hidden>Right, the hookah diet is a metaphor for relaxation and taste, not a medical plan.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+        <span data-lang="ru">Есть ли медицинские рекомендации?</span>
+        <span data-lang="en" hidden>Any medical recommendations?</span>
+      </button>
+      <div id="faq2" class="faq-answer" hidden>
+        <p data-lang="ru">Нет. Проект не даёт медицинских рекомендаций и не заменяет консультацию специалиста.</p>
+        <p data-lang="en" hidden>No. This project doesn't provide medical advice and can't replace a professional.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq3">Можно ли совмещать с другими привычками?</button>
+      <div id="faq3" class="faq-answer" hidden>
+        <p>Да, это свободный лайфстайл. Выберите чай, который любите, и делайте паузы в удобное время.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq4">Сколько времени занимает чайный ритуал?</button>
+      <div id="faq4" class="faq-answer" hidden>
+        <p>Пять минут достаточно, чтобы переключить внимание и почувствовать атмосферный отдых.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq5">Что если я предпочитаю кофе?</button>
+      <div id="faq5" class="faq-answer" hidden>
+        <p>Можно адаптировать ритуал под кофе или другие напитки, сохраняя принцип «меньше суеты — больше вкуса».</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="post1">
+    <h2>Чайный ритуал против стресса</h2>
+    <p>Когда город шумит, чай помогает переключиться. Сядь, вдохни аромат, позволь кальянной диете замедлить бегущие мысли. Несколько минут — и ты уже не гонишься за делами, а смакуешь момент.</p>
+  </section>
+  <section id="post2">
+    <h2>Кальянная диета как городской лайфстайл</h2>
+    <p>Жизнь мегаполиса требует пауз. Кальянная диета подсказывает: регулярные чайные ритуалы и лёгкие снеки дают телу баланс без лишних калорий, а уму — короткий отпуск.</p>
+  </section>
+  <section id="post3">
+    <h2>Лёгкие закуски и баланс вкуса</h2>
+    <p>Вместо тяжёлых перекусов выбери орехи, сухофрукты или травяной чай. Так ты сохраняешь вкус, поддерживаешь энергию и учишься слушать себя.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Контакты: <a href="mailto:info@example.com">info@example.com</a> | +7 000 000 00 00 <!-- TODO: update contacts --></p>
+  <p>Соцсети: <a href="#0">VK</a>, <a href="#0">Telegram</a> <!-- TODO: replace links --></p>
+  <p>© 2024 Кальянная диета</p>
+  <a href="#policy">Политика конфиденциальности</a>
+</footer>
+<p id="policy">Политика конфиденциальности — TODO.</p>
+
+<!-- scripts -->
+<script>
+  // i18n RU/EN
+  const langBtn=document.getElementById('lang-toggle');
+  function setLang(l){document.documentElement.lang=l;localStorage.setItem('lang',l);document.querySelectorAll('[data-lang]').forEach(el=>{el.hidden=el.dataset.lang!==l;});}
+  langBtn.addEventListener('click',()=>{const current=document.documentElement.lang==='ru'?'en':'ru';setLang(current);});
+  setLang(localStorage.getItem('lang')||'ru');
+
+  // Calculator
+  const form=document.getElementById('calc-form');const result=document.getElementById('calc-result');
+  ['snacks','calories','days'].forEach(id=>{const el=document.getElementById(id);const val=localStorage.getItem(id);if(val)el.value=val;el.addEventListener('input',()=>localStorage.setItem(id,el.value));});
+  form.addEventListener('submit',e=>{e.preventDefault();const snacks=+document.getElementById('snacks').value;const cal=+document.getElementById('calories').value;const days=+document.getElementById('days').value;const rituals=snacks*days;const saved=snacks*cal*days;result.textContent=`За ${days} дней ты заменишь ${rituals} перекусов на чайные ритуалы и сэкономишь ${saved} калорий.`;});
+  document.getElementById('reset').addEventListener('click',()=>{form.reset();result.textContent='';['snacks','calories','days'].forEach(id=>localStorage.removeItem(id));});
+
+  // Menu Filter
+  document.querySelectorAll('#menu .filters button').forEach(btn=>{
+    btn.addEventListener('click',()=>{document.querySelectorAll('#menu .filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const tag=btn.dataset.filter;document.querySelectorAll('#menu .card').forEach(card=>{const tags=card.dataset.tags.split(',');card.hidden=tag!=='all'&&!tags.includes(tag);});});
+  });
+
+  // FAQ
+  document.querySelectorAll('.faq-question').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const answer=document.getElementById(btn.getAttribute('aria-controls'));
+      const expanded=btn.getAttribute('aria-expanded')==='true';
+      btn.setAttribute('aria-expanded',!expanded);
+      if(expanded){
+        answer.style.maxHeight=null;
+        answer.hidden=true;
+      }else{
+        answer.hidden=false;
+        answer.style.maxHeight=answer.scrollHeight+'px';
+      }
+    });
+  });
+
+  // Newsletter
+  const nForm=document.getElementById('newsletter-form');const nMsg=document.getElementById('newsletter-msg');
+  nForm.addEventListener('submit',e=>{e.preventDefault();if(!email.value||!agree.checked){nMsg.textContent='Введите email и согласие.';return;}nMsg.textContent='Спасибо! Письмо уже летит.';nForm.reset();});
+</script>
 </body>
 </html>
